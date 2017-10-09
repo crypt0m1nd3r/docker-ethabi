@@ -14,14 +14,15 @@ Currently, only version **4.0.0** of ethabi-cli is installed in this image.
 
 ## Usage
 
-`$ docker run --rm -v ${PWD}:/ethabi ethabi`
+`$ docker pull cryptominder/ethabi`
+`$ docker run --rm -v ${PWD}:/ethabi cryptominder/ethabi:latest`
 
 The `/ethabi` is the working directory used for the `ethabi` executable in this image.  Use the `-v` option of `docker run` to map a local **absolute** path to `/ethabi`.
 
 
 ## Example
 
-`$ docker run --rm -v ${PWD}:/ethabi ethabi encode params -v string 'Hello World!'`
+`$ docker run --rm -v ${PWD}:/ethabi cryptominder/ethabi:latest encode params -v string 'Hello World!'`
 
 Should output:
 `0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000c48656c6c6f20576f726c64210000000000000000000000000000000000000000`
